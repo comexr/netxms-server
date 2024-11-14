@@ -23,7 +23,14 @@ modules:
     install:
       - netxms-server
       - netxms-dbdrv-pgsql
+      - postgresql-server
 
   - type: script
     scripts:
       - database.sh #Create database
+
+  - type: systemd
+    system:
+      enabled:
+        - netxms-server
+        - postgresql
