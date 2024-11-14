@@ -27,7 +27,7 @@ modules:
 
   - type: script
     scripts:
-      - database.sh #Create database
+      # - database.sh #Create database
 
   - type: systemd
     system:
