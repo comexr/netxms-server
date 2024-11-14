@@ -24,8 +24,6 @@ modules:
       - netxms-server
       - netxms-dbdrv-pgsql
 
-  # - type: script
-  #   snippets:
-  #     - "createuser -P netxms" #
-  #   scripts:
-  #     - database.sh #Create database
+  - type: script
+    scripts:
+      - database.sh #Create database
