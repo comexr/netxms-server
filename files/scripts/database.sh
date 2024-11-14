@@ -7,6 +7,7 @@ set -oue pipefail
 
 # Setup database
 sudo postgresql-setup --initdb #Initialize
+sudo systemctl enable --now postgresql #Enable and start postgresql server
 sudo -u postgres createuser $USER #Create DB user
 sudo -u postgres createdb -O $USER netxms #Create DB for user
 sed -i "1s/^/host netxms $USER localhost trust\n/" /var/lib/pgsql/data/pg_hba.conf #Allow local user DB auth
