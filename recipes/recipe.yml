@@ -23,7 +23,7 @@ modules:
     install:
       - netxms-server
       - netxms-dbdrv-pgsql
-      - postgresql-server
+      # - postgresql-server
 
   - type: script
     scripts:
@@ -33,3 +33,4 @@ modules:
     system:
       enabled:
         - netxms-server
+        # - postgresql

@@ -6,6 +6,7 @@
 set -oue pipefail
 
 # Setup database
+sudo dnf install -y postgresql-server
 sudo postgresql-setup --initdb #Initialize
 sudo systemctl enable --now postgresql #Enable and start postgresql server
 sudo -u postgres createuser $USER #Create DB user
