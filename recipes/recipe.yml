@@ -28,4 +28,4 @@ modules:
     system:
       enabled:
         - netxms-server
-        - postgresql
+        - postgres
