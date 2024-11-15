@@ -1,18 +1,18 @@
 [Unit]
-Description=Myapp Database Container
+Description=NetXMS Database Container
+
+[Container]
+ContainerName=netxms-db
+Image=docker.io/library/postgres:16
+AutoUpdate=registry
+PublishPort=5432:5432
+Volume=postgres:/var/lib/postgresql/data
+Environment=POSTGRES_DB=netxms
+Environment=POSTGRES_USER=netxms_user
+Environment=POSTGRES_PASSWORD=P@ssw0rd
 
 [Service]
 Restart=always
 
-[Container]
-Label=app=myapp
-ContainerName=myapp-db
-Image=docker.io/library/postgres:16-bookworm
-Network=myapp.network
-Volume=myapp-db.volume:/var/lib/postgresql/data
-Environment=POSTGRES_PASSWORD=S3cret
-Environment=POSTGRES_USER=user
-Environment=POSTGRES_DB=myapp_db
-
 [Install]
-WantedBy=multi-user.target default.target
+WantedBy=multi-user.target
