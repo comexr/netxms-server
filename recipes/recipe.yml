@@ -28,6 +28,7 @@ modules:
   - type: script
     scripts:
       # - database.sh #Create database
+      - postgres.sh
 
   - type: systemd
     system:
