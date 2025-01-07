@@ -6,5 +6,4 @@
 After installation, execute the following commands:
 ```
 nxdbmgr init pgsql
-sudo systemctl start netxms-server
 ```
